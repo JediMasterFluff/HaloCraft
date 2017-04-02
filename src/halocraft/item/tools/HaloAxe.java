@@ -1,8 +1,7 @@
-package com.halocraft.item.tools;
+package halocraft.item.tools;
 
-import com.halocraft.item.ItemModelProvider;
-import com.halocraft.main.Main;
-
+import halocraft.item.ItemModelProvider;
+import halocraft.main.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;

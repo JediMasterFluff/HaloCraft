@@ -1,4 +1,4 @@
-package com.halocraft.main;
+package halocraft.main;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

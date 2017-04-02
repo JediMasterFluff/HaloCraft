@@ -1,8 +1,7 @@
-package com.halocraft.main.client;
+package halocraft.main.client;
 
-import com.halocraft.item.ModItems;
-import com.halocraft.main.Main;
-
+import halocraft.item.ModItems;
+import halocraft.main.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 

@@ -1,8 +1,7 @@
-package com.halocraft.block;
+package halocraft.block;
 
-import com.halocraft.item.ItemModelProvider;
-import com.halocraft.main.Main;
-
+import halocraft.item.ItemModelProvider;
+import halocraft.main.Main;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

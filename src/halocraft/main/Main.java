@@ -1,10 +1,9 @@
-package com.halocraft.main;
+package halocraft.main;
 
-import com.halocraft.block.ModBlocks;
-import com.halocraft.crafting.ModRecipes;
-import com.halocraft.item.ModItems;
-import com.halocraft.main.client.HaloCraftTab;
-
+import halocraft.block.ModBlocks;
+import halocraft.crafting.ModRecipes;
+import halocraft.item.ModItems;
+import halocraft.main.client.HaloCraftTab;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

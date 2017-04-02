@@ -1,7 +1,6 @@
-package com.halocraft.item;
+package halocraft.item;
 
-import com.halocraft.main.Main;
-
+import halocraft.main.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

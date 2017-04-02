@@ -1,8 +1,7 @@
-package com.halocraft.crafting;
+package halocraft.crafting;
 
-import com.halocraft.block.ModBlocks;
-import com.halocraft.item.ModItems;
-
+import halocraft.block.ModBlocks;
+import halocraft.item.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;

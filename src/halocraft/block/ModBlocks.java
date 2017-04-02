@@ -1,7 +1,6 @@
-package com.halocraft.block;
+package halocraft.block;
 
-import com.halocraft.item.ItemModelProvider;
-
+import halocraft.item.ItemModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;

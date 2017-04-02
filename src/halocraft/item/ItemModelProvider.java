@@ -1,4 +1,4 @@
-package com.halocraft.item;
+package halocraft.item;
 
 import net.minecraft.item.Item;
 

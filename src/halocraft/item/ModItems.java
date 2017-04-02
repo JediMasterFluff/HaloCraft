@@ -1,7 +1,6 @@
-package com.halocraft.item;
+package halocraft.item;
 
-import com.halocraft.item.tools.HaloAxe;
-
+import halocraft.item.tools.HaloAxe;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;

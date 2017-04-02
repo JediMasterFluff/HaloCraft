@@ -1,4 +1,4 @@
-package com.halocraft.block;
+package halocraft.block;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

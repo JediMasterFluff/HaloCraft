@@ -1,4 +1,4 @@
-package com.halocraft.main;
+package halocraft.main;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
