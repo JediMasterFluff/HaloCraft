@@ -1,0 +1,11 @@
+# Items
+item.hardenedDiamond.name=Hardened Diamond
+item.hardenedDiamondAxe.name=Hardened Diamond Axe
+
+# Blocks
+tile.hardenedDiamondOre.name=Hardened Diamond Ore
+#tile.blockid.name=Block Name
+
+#mod title
+itemGroup.halocraft=Halo Mod
+itemGroup.halo_craft=HaloCraft
