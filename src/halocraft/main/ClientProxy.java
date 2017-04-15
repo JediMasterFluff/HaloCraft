@@ -11,24 +11,25 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ClientProxy {
-	
-	  public void preInit(FMLPreInitializationEvent e) {
-	    }
 
-	    public void init(FMLInitializationEvent e) {
+	public void preInit(FMLPreInitializationEvent e) {
+	}
 
-	    }
+	public void init(FMLInitializationEvent e) {
 
-	    public void postInit(FMLPostInitializationEvent e) {
+	}
 
-	    }
-	    
-	    @SubscribeEvent
-	    public void registerBlocks(RegistryEvent.Register<Block> event) {
-	        //event.getRegistry().registerAll(event);
-	    }
-	    
-	    public void registerItemRenderer(Item item, int meta, String id){
-	    	ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(Main.MODID + ":" + id, "inventory"));
-	    }
+	public void postInit(FMLPostInitializationEvent e) {
+
+	}
+
+	@SubscribeEvent
+	public void registerBlocks(RegistryEvent.Register<Block> event) {
+		// event.getRegistry().registerAll(event);
+	}
+
+	public void registerItemRenderer(Item item, int meta, String id) {
+		ModelLoader.setCustomModelResourceLocation(item, meta,
+				new ModelResourceLocation(Main.MODID + ":" + id, "inventory"));
+	}
 }

@@ -24,9 +24,9 @@ public class ServerProxy extends ClientProxy {
 		// TODO Auto-generated method stub
 		super.postInit(e);
 	}
-	
-	public void registerItemRenderer(Item item, int meta, String id){
-		
+
+	public void registerItemRenderer(Item item, int meta, String id) {
+
 	}
 
 }

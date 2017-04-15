@@ -1,7 +1,7 @@
 This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.
 
 #################################################
-         ForgeGradle 2.2-SNAPSHOT-2112b0a        
+         ForgeGradle 2.2-SNAPSHOT-7f5a769        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -11,68 +11,213 @@ This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:eclipseClasspath
-Download https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar
-Download https://libraries.minecraft.net/com/mojang/netty/1.6/netty-1.6-sources.jar
-Download https://libraries.minecraft.net/oshi-project/oshi-core/1.1/oshi-core-1.1-sources.jar
-Download https://repo1.maven.org/maven2/net/java/dev/jna/jna/3.4.0/jna-3.4.0-sources.jar
-Download https://repo1.maven.org/maven2/net/java/dev/jna/platform/3.4.0/platform-3.4.0-sources.jar
-Download https://libraries.minecraft.net/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2-sources.jar
-Download https://repo1.maven.org/maven2/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6-sources.jar
-Download https://repo1.maven.org/maven2/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final-sources.jar
-Download https://repo1.maven.org/maven2/com/google/guava/guava/17.0/guava-17.0-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-sources.jar
-Download https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-sources.jar
-Download https://repo1.maven.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9-sources.jar
-Download https://repo1.maven.org/maven2/net/java/jutils/jutils/1.0.0/jutils-1.0.0-sources.jar
-Download https://repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar
-Download https://libraries.minecraft.net/com/mojang/authlib/1.5.24/authlib-1.5.24-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3-sources.jar
-Download https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2-sources.jar
-Download https://libraries.minecraft.net/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9-sources.jar
-Download https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9-sources.jar
-Download https://libraries.minecraft.net/net/minecraft/launchwrapper/1.12/launchwrapper-1.12-sources.jar
-Download https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13-sources.jar
-Download https://repo1.maven.org/maven2/org/ow2/asm/asm-debug-all/5.0.3/asm-debug-all-5.0.3-sources.jar
-Download https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3-sources.jar
-Download https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2-sources.jar
-Download https://repo1.maven.org/maven2/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3-sources.jar
-Download https://libraries.minecraft.net/com/paulscode/codecjorbis/20101023/codecjorbis-20101023-sources.jar
-Download https://libraries.minecraft.net/com/paulscode/codecwav/20101023/codecwav-20101023-sources.jar
-Download https://libraries.minecraft.net/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123-sources.jar
-Download https://libraries.minecraft.net/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824-sources.jar
-Download https://libraries.minecraft.net/com/paulscode/soundsystem/20120107/soundsystem-20120107-sources.jar
-Download https://repo1.maven.org/maven2/net/java/jinput/jinput/2.0.5/jinput-2.0.5-sources.jar
-Download https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209-sources.jar
-Download https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209-sources.jar
-Download https://libraries.minecraft.net/java3d/vecmath/1.5.2/vecmath-1.5.2-sources.jar
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11-sources.jar
-Download https://repo1.maven.org/maven2/org/scala-lang/scala-actors/2.11.0/scala-actors-2.11.0-sources.jar
-:eclipseJdt
-:eclipseProject
 :getVersionJson
-:extractNatives SKIPPED
 :extractUserdev UP-TO-DATE
-:getAssetIndex UP-TO-DATE
+:extractDependencyATs SKIPPED
+:extractMcpData SKIPPED
+:extractMcpMappings SKIPPED
+:genSrgs SKIPPED
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:splitServerJar SKIPPED
+:mergeJars SKIPPED
+:deobfMcSRG SKIPPED
+:decompileMc SKIPPED
+:fixMcSources SKIPPED
+:applySourcePatches SKIPPED
+:remapMcSources SKIPPED
+:recompileMc SKIPPED
+:extractNatives
+:getAssetIndex
 :getAssets
+Current status: 90/1196   7%
+Current status: 119/1196   9%
+Current status: 150/1196   12%
+Current status: 172/1196   14%
+Current status: 192/1196   16%
+Current status: 210/1196   17%
+Current status: 220/1196   18%
+Current status: 226/1196   18%
+Current status: 236/1196   19%
+Current status: 236/1196   19%
+Current status: 243/1196   20%
+Current status: 263/1196   21%
+Current status: 274/1196   22%
+Current status: 286/1196   23%
+Current status: 299/1196   25%
+Current status: 303/1196   25%
+Current status: 312/1196   26%
+Current status: 322/1196   26%
+Current status: 332/1196   27%
+Current status: 345/1196   28%
+Current status: 365/1196   30%
+Current status: 369/1196   30%
+Current status: 371/1196   31%
+Current status: 372/1196   31%
+Current status: 377/1196   31%
+Current status: 389/1196   32%
+Current status: 396/1196   33%
+Current status: 404/1196   33%
+Current status: 416/1196   34%
+Current status: 428/1196   35%
+Current status: 437/1196   36%
+Current status: 441/1196   36%
+Current status: 447/1196   37%
+Current status: 449/1196   37%
+Current status: 454/1196   37%
+Current status: 461/1196   38%
+Current status: 463/1196   38%
+Current status: 468/1196   39%
+Current status: 472/1196   39%
+Current status: 474/1196   39%
+Current status: 491/1196   41%
+Current status: 500/1196   41%
+Current status: 514/1196   42%
+Current status: 528/1196   44%
+Current status: 538/1196   44%
+Current status: 547/1196   45%
+Current status: 553/1196   46%
+Current status: 554/1196   46%
+Current status: 556/1196   46%
+Current status: 569/1196   47%
+Current status: 581/1196   48%
+Current status: 595/1196   49%
+Current status: 608/1196   50%
+Current status: 616/1196   51%
+Current status: 627/1196   52%
+Current status: 636/1196   53%
+Current status: 642/1196   53%
+Current status: 651/1196   54%
+Current status: 659/1196   55%
+Current status: 668/1196   55%
+Current status: 686/1196   57%
+Current status: 701/1196   58%
+Current status: 710/1196   59%
+Current status: 723/1196   60%
+Current status: 731/1196   61%
+Current status: 738/1196   61%
+Current status: 744/1196   62%
+Current status: 747/1196   62%
+Current status: 752/1196   62%
+Current status: 752/1196   62%
+Current status: 754/1196   63%
+Current status: 757/1196   63%
+Current status: 761/1196   63%
+Current status: 775/1196   64%
+Current status: 784/1196   65%
+Current status: 792/1196   66%
+Current status: 801/1196   66%
+Current status: 811/1196   67%
+Current status: 820/1196   68%
+Current status: 829/1196   69%
+Current status: 836/1196   69%
+Current status: 844/1196   70%
+Current status: 849/1196   70%
+Current status: 853/1196   71%
+Current status: 856/1196   71%
+Current status: 865/1196   72%
+Current status: 874/1196   73%
+Current status: 879/1196   73%
+Current status: 880/1196   73%
+Current status: 886/1196   74%
+Current status: 895/1196   74%
+Current status: 901/1196   75%
+Current status: 908/1196   75%
+Current status: 916/1196   76%
+Current status: 921/1196   77%
+Current status: 924/1196   77%
+Current status: 925/1196   77%
+Current status: 932/1196   77%
+Current status: 937/1196   78%
+Current status: 942/1196   78%
+Current status: 945/1196   79%
+Current status: 947/1196   79%
+Current status: 947/1196   79%
+Current status: 948/1196   79%
+Current status: 953/1196   79%
+Current status: 961/1196   80%
+Current status: 966/1196   80%
+Current status: 968/1196   80%
+Current status: 970/1196   81%
+Current status: 978/1196   81%
+Current status: 985/1196   82%
+Current status: 989/1196   82%
+Current status: 992/1196   82%
+Current status: 994/1196   83%
+Current status: 998/1196   83%
+Current status: 998/1196   83%
+Current status: 998/1196   83%
+Current status: 998/1196   83%
+Current status: 998/1196   83%
+Current status: 1005/1196   84%
+Current status: 1008/1196   84%
+Current status: 1016/1196   84%
+Current status: 1020/1196   85%
+Current status: 1020/1196   85%
+Current status: 1022/1196   85%
+Current status: 1022/1196   85%
+Current status: 1025/1196   85%
+Current status: 1026/1196   85%
+Current status: 1028/1196   85%
+Current status: 1030/1196   86%
+Current status: 1033/1196   86%
+Current status: 1033/1196   86%
+Current status: 1033/1196   86%
+Current status: 1036/1196   86%
+Current status: 1043/1196   87%
+Current status: 1047/1196   87%
+Current status: 1054/1196   88%
+Current status: 1057/1196   88%
+Current status: 1061/1196   88%
+Current status: 1062/1196   88%
+Current status: 1062/1196   88%
+Current status: 1062/1196   88%
+Current status: 1063/1196   88%
+Current status: 1070/1196   89%
+Current status: 1072/1196   89%
+Current status: 1076/1196   89%
+Current status: 1086/1196   90%
+Current status: 1093/1196   91%
+Current status: 1099/1196   91%
+Current status: 1109/1196   92%
+Current status: 1122/1196   93%
+Current status: 1126/1196   94%
+Current status: 1134/1196   94%
+Current status: 1143/1196   95%
+Current status: 1155/1196   96%
+Current status: 1164/1196   97%
+Current status: 1171/1196   97%
+Current status: 1178/1196   98%
+Current status: 1185/1196   99%
+Current status: 1185/1196   99%
+Current status: 1185/1196   99%
+Current status: 1186/1196   99%
+Current status: 1187/1196   99%
+Current status: 1187/1196   99%
+Current status: 1187/1196   99%
+Current status: 1188/1196   99%
+Current status: 1188/1196   99%
+Current status: 1188/1196   99%
 Current status: 1189/1196   99%
-:makeStart SKIPPED
-:makeEclipseCleanRunClient
-:makeEclipseCleanRunServer
-:eclipse
+Current status: 1189/1196   99%
+Current status: 1192/1196   99%
+Current status: 1194/1196   99%
+Current status: 1194/1196   99%
+Current status: 1194/1196   99%
+Current status: 1194/1196   99%
+Current status: 1194/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+Current status: 1195/1196   99%
+:makeStart
+:setupDecompWorkspace
 
 BUILD SUCCESSFUL
 
-Total time: 20.873 secs
+Total time: 3 mins 16.849 secs

@@ -8,19 +8,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 	public static ItemBase hardenedDiamond;
 	public static HaloAxe hardendedDiamondAxe;
-	
-	public static void init(){
+
+	public static void init() {
 		hardenedDiamond = register(new ItemBase("hardenedDiamond"));
-		hardendedDiamondAxe = register(new HaloAxe(ToolMaterial.DIAMOND,"hardenedDiamondAxe"));
+		hardendedDiamondAxe = register(new HaloAxe(ToolMaterial.DIAMOND, "hardenedDiamondAxe"));
 	}
-	
-	private static <T extends Item> T register(T item){
+
+	private static <T extends Item> T register(T item) {
 		GameRegistry.register(item);
-		
-		if(item instanceof ItemModelProvider){
-			((ItemModelProvider)item).registerItemModel(item);
+
+		if (item instanceof ItemModelProvider) {
+			((ItemModelProvider) item).registerItemModel(item);
 		}
-		
+
 		return item;
 	}
 }

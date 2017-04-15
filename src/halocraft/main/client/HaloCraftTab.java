@@ -5,20 +5,20 @@ import halocraft.main.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class HaloCraftTab extends CreativeTabs{
-	
-	public HaloCraftTab(){
+public class HaloCraftTab extends CreativeTabs {
+
+	public HaloCraftTab() {
 		super(Main.MODID);
-		//setBackgroundImageName("hardenedDiamond.png");
+		// setBackgroundImageName("hardenedDiamond.png");
 	}
-	
+
 	@Override
-	public ItemStack getTabIconItem(){
+	public ItemStack getTabIconItem() {
 		return new ItemStack(ModItems.hardenedDiamond);
 	}
-	
+
 	@Override
-	public boolean hasSearchBar(){
+	public boolean hasSearchBar() {
 		return true;
 	}
 

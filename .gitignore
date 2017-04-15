@@ -7,3 +7,13 @@
 /gradlew.bat
 /HaloCraft_Client.launch
 /HaloCraft_Server.launch
+/config/
+/crash-reports/
+/logs/
+/saves/
+/options.txt
+/realms_persistence.json
+/usercache.json
+/usernamecache.json
+/mods/
+/resourcepacks/
