@@ -6,10 +6,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class BlockBase extends Block implements ItemModelProvider {
 
 	protected String name;
+	
+	public static ToolMaterial haloToolMaterial = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damage, enchantability);
 
 	public BlockBase(Material mat, String name) {
 		super(mat);
