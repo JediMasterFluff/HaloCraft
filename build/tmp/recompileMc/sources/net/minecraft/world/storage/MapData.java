@@ -27,7 +27,9 @@ public class MapData extends WorldSavedData
     public byte scale;
     /** colours */
     public byte[] colors = new byte[16384];
+    /** Holds a reference to the MapInfo of the players who own a copy of the map */
     public List<MapData.MapInfo> playersArrayList = Lists.<MapData.MapInfo>newArrayList();
+    /** Holds a reference to the players who own a copy of the map and a reference to their MapInfo */
     private final Map<EntityPlayer, MapData.MapInfo> playersHashMap = Maps.<EntityPlayer, MapData.MapInfo>newHashMap();
     public Map<String, MapDecoration> mapDecorations = Maps.<String, MapDecoration>newLinkedHashMap();
 

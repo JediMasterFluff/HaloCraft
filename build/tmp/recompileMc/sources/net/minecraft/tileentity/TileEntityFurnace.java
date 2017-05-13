@@ -37,6 +37,7 @@ public class TileEntityFurnace extends TileEntityLockable implements ITickable, 
     private static final int[] SLOTS_TOP = new int[] {0};
     private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
     private static final int[] SLOTS_SIDES = new int[] {1};
+    /** The ItemStacks that hold the items currently being used in the furnace */
     private NonNullList<ItemStack> furnaceItemStacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
     /** The number of ticks that the furnace will keep burning */
     private int furnaceBurnTime;
@@ -356,10 +357,6 @@ public class TileEntityFurnace extends TileEntityLockable implements ITickable, 
 
     public static boolean isItemFuel(ItemStack stack)
     {
-        /**
-         * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
-         * fuel
-         */
         return getItemBurnTime(stack) > 0;
     }
 

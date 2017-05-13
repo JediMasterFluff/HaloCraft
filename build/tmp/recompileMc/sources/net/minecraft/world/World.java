@@ -71,13 +71,17 @@ public abstract class World implements IBlockAccess, net.minecraftforge.common.c
     private int seaLevel = 63;
     /** boolean; if true updates scheduled by scheduleBlockUpdate happen immediately */
     protected boolean scheduledUpdatesAreImmediate;
+    /** A list of all Entities in all currently-loaded chunks */
     public final List<Entity> loadedEntityList = Lists.<Entity>newArrayList();
     protected final List<Entity> unloadedEntityList = Lists.<Entity>newArrayList();
+    /** A list of the loaded tile entities in the world */
     public final List<TileEntity> loadedTileEntityList = Lists.<TileEntity>newArrayList();
     public final List<TileEntity> tickableTileEntities = Lists.<TileEntity>newArrayList();
     private final List<TileEntity> addedTileEntityList = Lists.<TileEntity>newArrayList();
     private final List<TileEntity> tileEntitiesToBeRemoved = Lists.<TileEntity>newArrayList();
+    /** Array list of players in the world. */
     public final List<EntityPlayer> playerEntities = Lists.<EntityPlayer>newArrayList();
+    /** a list of all the lightning entities */
     public final List<Entity> weatherEffects = Lists.<Entity>newArrayList();
     protected final IntHashMap<Entity> entitiesById = new IntHashMap();
     private final long cloudColour = 16777215L;
@@ -1448,6 +1452,9 @@ public abstract class World implements IBlockAccess, net.minecraftforge.common.c
         return !p_191504_4_.isEmpty();
     }
 
+    /**
+     * Gets a list of bounding boxes that intersect with the provided AABB.
+     */
     public List<AxisAlignedBB> getCollisionBoxes(@Nullable Entity entityIn, AxisAlignedBB aabb)
     {
         List<AxisAlignedBB> list = Lists.<AxisAlignedBB>newArrayList();
@@ -3165,11 +3172,17 @@ public abstract class World implements IBlockAccess, net.minecraftforge.common.c
         return null;
     }
 
+    /**
+     * Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb
+     */
     public List<Entity> getEntitiesWithinAABBExcludingEntity(@Nullable Entity entityIn, AxisAlignedBB bb)
     {
         return this.getEntitiesInAABBexcluding(entityIn, bb, EntitySelectors.NOT_SPECTATING);
     }
 
+    /**
+     * Gets all entities within the specified AABB excluding the one passed into it.
+     */
     public List<Entity> getEntitiesInAABBexcluding(@Nullable Entity entityIn, AxisAlignedBB boundingBox, @Nullable Predicate <? super Entity > predicate)
     {
         List<Entity> list = Lists.<Entity>newArrayList();
@@ -3222,6 +3235,9 @@ public abstract class World implements IBlockAccess, net.minecraftforge.common.c
         return list;
     }
 
+    /**
+     * Gets all entities of the specified class type which intersect with the AABB.
+     */
     public <T extends Entity> List<T> getEntitiesWithinAABB(Class <? extends T > classEntity, AxisAlignedBB bb)
     {
         return this.<T>getEntitiesWithinAABB(classEntity, bb, EntitySelectors.NOT_SPECTATING);
@@ -3284,6 +3300,9 @@ public abstract class World implements IBlockAccess, net.minecraftforge.common.c
         return (Entity)this.entitiesById.lookup(id);
     }
 
+    /**
+     * Accessor for world Loaded Entity List
+     */
     @SideOnly(Side.CLIENT)
     public List<Entity> getLoadedEntityList()
     {

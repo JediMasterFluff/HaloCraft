@@ -29,6 +29,7 @@ import net.minecraft.world.World;
 public class Village
 {
     private World world;
+    /** list of VillageDoorInfo objects */
     private final List<VillageDoorInfo> villageDoorInfoList = Lists.<VillageDoorInfo>newArrayList();
     /**
      * This is the sum of all door coordinates and used to calculate the actual village center by dividing by the number
@@ -43,6 +44,7 @@ public class Village
     private int numVillagers;
     /** Timestamp of tick count when villager last bred */
     private int noBreedTicks;
+    /** List of player reputations with this village */
     private final Map<String, Integer> playerReputation = Maps.<String, Integer>newHashMap();
     private final List<Village.VillageAggressor> villageAgressors = Lists.<Village.VillageAggressor>newArrayList();
     private int numIronGolems;
@@ -198,6 +200,9 @@ public class Village
         return this.center.distanceSq(pos) < (double)(this.villageRadius * this.villageRadius);
     }
 
+    /**
+     * called only by class EntityAIMoveThroughVillage
+     */
     public List<VillageDoorInfo> getVillageDoorInfoList()
     {
         return this.villageDoorInfoList;

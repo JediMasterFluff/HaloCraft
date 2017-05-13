@@ -17,6 +17,7 @@ import net.minecraft.world.chunk.IChunkGenerator;
 
 public class ChunkProviderDebug implements IChunkGenerator
 {
+    /** A list of all valid block states. */
     private static final List<IBlockState> ALL_VALID_STATES = Lists.<IBlockState>newArrayList();
     private static final int GRID_WIDTH;
     private static final int GRID_HEIGHT;

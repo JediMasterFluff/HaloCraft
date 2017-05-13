@@ -15,6 +15,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 
 public class CombatTracker
 {
+    /** The CombatEntry objects that we've tracked so far. */
     private final List<CombatEntry> combatEntries = Lists.<CombatEntry>newArrayList();
     /** The entity tracked. */
     private final EntityLivingBase fighter;

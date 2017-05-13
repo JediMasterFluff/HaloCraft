@@ -23,6 +23,7 @@ public class BiomeProvider
     private GenLayer biomeIndexLayer;
     /** The biome list. */
     private final BiomeCache biomeCache;
+    /** A list of biomes that the player can spawn in. */
     private final List<Biome> biomesToSpawnIn;
     public static List<Biome> allowedBiomes = Lists.newArrayList(Biomes.FOREST, Biomes.PLAINS, Biomes.TAIGA, Biomes.TAIGA_HILLS, Biomes.FOREST_HILLS, Biomes.JUNGLE, Biomes.JUNGLE_HILLS);
     protected BiomeProvider()
@@ -51,6 +52,9 @@ public class BiomeProvider
         this(info.getSeed(), info.getTerrainType(), info.getGeneratorOptions());
     }
 
+    /**
+     * Gets the list of valid biomes for the player to spawn in.
+     */
     public List<Biome> getBiomesToSpawnIn()
     {
         return this.biomesToSpawnIn;

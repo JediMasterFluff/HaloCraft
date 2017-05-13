@@ -18,6 +18,9 @@ public class Util
         return s.contains("win") ? Util.EnumOS.WINDOWS : (s.contains("mac") ? Util.EnumOS.OSX : (s.contains("solaris") ? Util.EnumOS.SOLARIS : (s.contains("sunos") ? Util.EnumOS.SOLARIS : (s.contains("linux") ? Util.EnumOS.LINUX : (s.contains("unix") ? Util.EnumOS.LINUX : Util.EnumOS.UNKNOWN)))));
     }
 
+    /**
+     * Run a task and return the result, catching any execution exceptions and logging them to the specified logger
+     */
     @Nullable
     public static <V> V runTask(FutureTask<V> task, Logger logger)
     {

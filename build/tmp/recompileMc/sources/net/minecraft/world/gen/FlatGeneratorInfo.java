@@ -14,7 +14,9 @@ import net.minecraft.world.biome.Biome;
 
 public class FlatGeneratorInfo
 {
+    /** List of layers on this preset. */
     private final List<FlatLayerInfo> flatLayers = Lists.<FlatLayerInfo>newArrayList();
+    /** List of world features enabled on this preset. */
     private final Map<String, Map<String, String>> worldFeatures = Maps.<String, Map<String, String>>newHashMap();
     private int biomeToUse;
 
@@ -34,11 +36,17 @@ public class FlatGeneratorInfo
         this.biomeToUse = biome;
     }
 
+    /**
+     * Return the list of world features enabled on this preset.
+     */
     public Map<String, Map<String, String>> getWorldFeatures()
     {
         return this.worldFeatures;
     }
 
+    /**
+     * Return the list of layers on this preset.
+     */
     public List<FlatLayerInfo> getFlatLayers()
     {
         return this.flatLayers;

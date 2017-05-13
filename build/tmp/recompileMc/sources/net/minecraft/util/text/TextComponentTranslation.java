@@ -17,6 +17,11 @@ public class TextComponentTranslation extends TextComponentBase
     private final Object[] formatArgs;
     private final Object syncLock = new Object();
     private long lastTranslationUpdateTimeInMilliseconds = -1L;
+    /**
+     * The discrete elements that make up this component.  For example, this would be ["Prefix, ", "FirstArg",
+     * "SecondArg", " again ", "SecondArg", " and ", "FirstArg", " lastly ", "ThirdArg", " and also ", "FirstArg", "
+     * again!"] for "translation.test.complex" (see en-US.lang)
+     */
     @VisibleForTesting
     List<ITextComponent> children = Lists.<ITextComponent>newArrayList();
     public static final Pattern STRING_VARIABLE_PATTERN = Pattern.compile("%(?:(\\d+)\\$)?([A-Za-z%]|$)");

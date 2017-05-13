@@ -45,6 +45,7 @@ public class RConThreadQuery extends RConThreadBase
     private String queryHostname;
     /** The hostname of the running server */
     private String serverHostname;
+    /** A map of SocketAddress objects to RConThreadQueryAuth objects */
     private final Map<SocketAddress, RConThreadQuery.Auth> queryClients;
     /** The time that this RConThreadQuery was constructed, from (new Date()).getTime() */
     private final long time;

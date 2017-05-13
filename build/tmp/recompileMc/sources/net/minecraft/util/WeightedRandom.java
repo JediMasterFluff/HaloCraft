@@ -22,6 +22,9 @@ public class WeightedRandom
         return i;
     }
 
+    /**
+     * Returns a random choice from the input items, with a total weight value.
+     */
     public static <T extends WeightedRandom.Item> T getRandomItem(Random random, List<T> collection, int totalWeight)
     {
         if (totalWeight <= 0)
@@ -53,11 +56,11 @@ public class WeightedRandom
         return (T)null;
     }
 
+    /**
+     * Returns a random choice from the input items.
+     */
     public static <T extends WeightedRandom.Item> T getRandomItem(Random random, List<T> collection)
     {
-        /**
-         * Returns a random choice from the input items, with a total weight value.
-         */
         return getRandomItem(random, collection, getTotalWeight(collection));
     }
 

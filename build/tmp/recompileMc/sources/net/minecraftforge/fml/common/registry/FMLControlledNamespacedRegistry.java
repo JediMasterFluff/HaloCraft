@@ -377,9 +377,6 @@ public class FMLControlledNamespacedRegistry<I extends IForgeRegistryEntry<I>> e
 
             if (name != null)
             {
-                /**
-                 * Does this registry contain an entry for the given key?
-                 */
                 return containsKey(name);
             }
         }
@@ -880,12 +877,12 @@ public class FMLControlledNamespacedRegistry<I extends IForgeRegistryEntry<I>> e
     @Nullable
     public ResourceLocation getKey(I value)
     {
-        /**
-         * Gets the name we use to identify the given object.
-         */
         return getNameForObject(value);
     }
 
+    /**
+     * Gets all the keys recognized by this registry.
+     */
     @Nonnull
     @Override //Bouncer for OBF, as the super class's function is NotchCode and gets obfed. This plus the SRG lines prevents a AbstractMethodException
     public Set<ResourceLocation> getKeys()

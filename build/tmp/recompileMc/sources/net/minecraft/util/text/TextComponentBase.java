@@ -11,6 +11,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public abstract class TextComponentBase implements ITextComponent
 {
+    /**
+     * The later siblings of this component.  If this component turns the text bold, that will apply to all the siblings
+     * until a later sibling turns the text something else.
+     */
     protected List<ITextComponent> siblings = Lists.<ITextComponent>newArrayList();
     private Style style;
 
@@ -27,6 +31,9 @@ public abstract class TextComponentBase implements ITextComponent
         return this;
     }
 
+    /**
+     * Gets the sibling components of this one.
+     */
     public List<ITextComponent> getSiblings()
     {
         return this.siblings;
@@ -125,6 +132,10 @@ public abstract class TextComponentBase implements ITextComponent
         return stringbuilder.toString();
     }
 
+    /**
+     * Creates an iterator that iterates over the given components, returning deep copies of each component in turn so
+     * that the properties of the returned objects will remain externally consistent after being returned.
+     */
     public static Iterator<ITextComponent> createDeepCopyIterator(Iterable<ITextComponent> components)
     {
         Iterator<ITextComponent> iterator = Iterators.concat(Iterators.transform(components.iterator(), new Function<ITextComponent, Iterator<ITextComponent>>()

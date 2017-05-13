@@ -1617,6 +1617,10 @@ public class StructureVillagePieces
             /** World terrain type, 0 for normal, 1 for flap map */
             public int terrainType;
             public StructureVillagePieces.PieceWeight structVillagePieceWeight;
+            /**
+             * Contains List of all spawnable Structure Piece Weights. If no more Pieces of a type can be spawned, they
+             * are removed from this list
+             */
             public List<StructureVillagePieces.PieceWeight> structureVillageWeightedPieceList;
             public List<StructureComponent> pendingHouses = Lists.<StructureComponent>newArrayList();
             public List<StructureComponent> pendingRoads = Lists.<StructureComponent>newArrayList();

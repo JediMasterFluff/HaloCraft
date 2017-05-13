@@ -34,6 +34,7 @@ public class ChunkProviderServer implements IChunkProvider
     private final Set<Long> droppedChunksSet = Sets.<Long>newHashSet();
     public final IChunkGenerator chunkGenerator;
     public final IChunkLoader chunkLoader;
+    /** map of chunk Id's to Chunk instances */
     public final Long2ObjectMap<Chunk> id2ChunkMap = new Long2ObjectOpenHashMap(8192);
     public final WorldServer world;
     private Set<Long> loadingChunks = com.google.common.collect.Sets.newHashSet();

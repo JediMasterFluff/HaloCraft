@@ -31,9 +31,6 @@ public class RConUtils
      */
     public static int getRemainingBytesAsLEInt(byte[] p_72662_0_, int p_72662_1_)
     {
-        /**
-         * Read 4 bytes from the given array in little-endian format and return them as an int
-         */
         return getBytesAsLEInt(p_72662_0_, p_72662_1_, p_72662_0_.length);
     }
 

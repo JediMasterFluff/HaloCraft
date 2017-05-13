@@ -22,11 +22,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class PotionUtils
 {
+    /**
+     * Creates a List of PotionEffect from data on the passed ItemStack's NBTTagCompound.
+     */
     public static List<PotionEffect> getEffectsFromStack(ItemStack stack)
     {
-        /**
-         * Creates a list of PotionEffect from data on a NBTTagCompound.
-         */
         return getEffectsFromTag(stack.getTagCompound());
     }
 
@@ -38,6 +38,9 @@ public class PotionUtils
         return list;
     }
 
+    /**
+     * Creates a list of PotionEffect from data on a NBTTagCompound.
+     */
     public static List<PotionEffect> getEffectsFromTag(@Nullable NBTTagCompound tag)
     {
         List<PotionEffect> list = Lists.<PotionEffect>newArrayList();
@@ -132,9 +135,6 @@ public class PotionUtils
 
     public static PotionType getPotionFromItem(ItemStack itemIn)
     {
-        /**
-         * If no correct potion is found, returns the default one : PotionTypes.water
-         */
         return getPotionTypeFromNBT(itemIn.getTagCompound());
     }
 

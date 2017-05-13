@@ -18,6 +18,9 @@ public class NonNullList<E> extends AbstractList<E>
         return new NonNullList();
     }
 
+    /**
+     * Creates a new NonNullList with <i>fixed</i> size, and filled with the object passed.
+     */
     public static <E> NonNullList<E> withSize(int size, E fill)
     {
         Validate.notNull(fill);

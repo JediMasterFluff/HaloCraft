@@ -31,6 +31,9 @@ public class LootTable
         this.pools = Lists.newArrayList(poolsIn);
     }
 
+    /**
+     * returns a list of loot generated from a bunch of pools
+     */
     public List<ItemStack> generateLootForPools(Random rand, LootContext context)
     {
         List<ItemStack> list = Lists.<ItemStack>newArrayList();

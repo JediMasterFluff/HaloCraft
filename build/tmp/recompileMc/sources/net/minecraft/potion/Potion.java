@@ -25,6 +25,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Potion extends net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl<Potion>
 {
     public static final RegistryNamespaced<ResourceLocation, Potion> REGISTRY = net.minecraftforge.fml.common.registry.GameData.getPotionRegistry();
+    /** Contains a Map of the AttributeModifiers registered by potions */
     private final Map<IAttribute, AttributeModifier> attributeModifierMap = Maps.<IAttribute, AttributeModifier>newHashMap();
     /** This field indicated if the effect is 'bad' - negative - for the entity. */
     private final boolean isBadEffect;

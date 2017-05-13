@@ -80,6 +80,14 @@ public abstract class CommandTreeBase extends CommandBase
         return s1;
     }
 
+    /**
+     * Get a list of options for when the user presses the TAB key
+     *  
+     * @param server The server instance
+     * @param sender The ICommandSender to get tab completions for
+     * @param args Any arguments that were present when TAB was pressed
+     * @param targetPos The block that the player's mouse is over, <tt>null</tt> if the mouse is not over a block
+     */
     @Override
     @Nonnull
     public List<String> getTabCompletions(@Nonnull MinecraftServer server, @Nonnull ICommandSender sender, @Nonnull String[] args, @Nullable BlockPos pos)

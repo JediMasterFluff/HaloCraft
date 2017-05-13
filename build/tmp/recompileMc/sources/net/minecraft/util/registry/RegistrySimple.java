@@ -15,9 +15,13 @@ import org.apache.logging.log4j.Logger;
 public class RegistrySimple<K, V> implements IRegistry<K, V>
 {
     private static final Logger LOGGER = LogManager.getLogger();
+    /** Objects registered on this registry. */
     protected final Map<K, V> registryObjects = this.createUnderlyingMap();
     private Object[] values;
 
+    /**
+     * Creates the Map we will use to map keys to their registered values.
+     */
     protected Map<K, V> createUnderlyingMap()
     {
         return Maps.<K, V>newHashMap();
@@ -46,6 +50,9 @@ public class RegistrySimple<K, V> implements IRegistry<K, V>
         this.registryObjects.put(key, value);
     }
 
+    /**
+     * Gets all the keys recognized by this registry.
+     */
     public Set<K> getKeys()
     {
         return Collections.<K>unmodifiableSet(this.registryObjects.keySet());

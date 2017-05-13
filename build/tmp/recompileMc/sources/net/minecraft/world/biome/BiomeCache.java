@@ -12,7 +12,9 @@ public class BiomeCache
     private final BiomeProvider chunkManager;
     /** The last time this BiomeCache was cleaned, in milliseconds. */
     private long lastCleanupTime;
+    /** The map of keys to BiomeCacheBlocks. Keys are based on the chunk x, z coordinates as (x | z << 32). */
     private final Long2ObjectMap<BiomeCache.Block> cacheMap = new Long2ObjectOpenHashMap(4096);
+    /** The list of cached BiomeCacheBlocks */
     private final List<BiomeCache.Block> cache = Lists.<BiomeCache.Block>newArrayList();
 
     public BiomeCache(BiomeProvider chunkManagerIn)

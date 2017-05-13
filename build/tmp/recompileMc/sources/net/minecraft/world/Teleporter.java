@@ -20,6 +20,7 @@ public class Teleporter
     private final WorldServer worldServerInstance;
     /** A private Random() function in Teleporter */
     private final Random random;
+    /** Stores successful portal placement locations for rapid lookup. */
     private final Long2ObjectMap<Teleporter.PortalPosition> destinationCoordinateCache = new Long2ObjectOpenHashMap(4096);
 
     public Teleporter(WorldServer worldIn)

@@ -30,6 +30,7 @@ public class TileEntityBrewingStand extends TileEntityLockable implements ITicka
     private static final int[] SLOTS_FOR_DOWN = new int[] {0, 1, 2, 3};
     /** an array of the output slot indices */
     private static final int[] OUTPUT_SLOTS = new int[] {0, 1, 2, 4};
+    /** The ItemStacks currently placed in the slots of the brewing stand */
     private NonNullList<ItemStack> brewingItemStacks = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
     private int brewTime;
     /** an integer with each bit specifying whether that slot of the stand contains a potion */

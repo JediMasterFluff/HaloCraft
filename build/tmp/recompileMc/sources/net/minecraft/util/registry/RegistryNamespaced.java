@@ -10,7 +10,9 @@ import net.minecraft.util.IntIdentityHashBiMap;
 
 public class RegistryNamespaced<K, V> extends RegistrySimple<K, V> implements IObjectIntIterable<V>
 {
+    /** The backing store that maps Integers to objects. */
     protected final IntIdentityHashBiMap<V> underlyingIntegerMap = new IntIdentityHashBiMap(256);
+    /** A BiMap of objects (key) to their names (value). */
     protected final Map<V, K> inverseObjectRegistry;
 
     public RegistryNamespaced()
@@ -24,6 +26,9 @@ public class RegistryNamespaced<K, V> extends RegistrySimple<K, V> implements IO
         this.putObject(key, value);
     }
 
+    /**
+     * Creates the Map we will use to map keys to their registered values.
+     */
     protected Map<K, V> createUnderlyingMap()
     {
         return HashBiMap.<K, V>create();

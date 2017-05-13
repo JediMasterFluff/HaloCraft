@@ -13,12 +13,17 @@ import net.minecraft.util.text.TextFormatting;
 
 public class Scoreboard
 {
+    /** Map of objective names to ScoreObjective objects. */
     private final Map<String, ScoreObjective> scoreObjectives = Maps.<String, ScoreObjective>newHashMap();
+    /** Map of IScoreObjectiveCriteria objects to ScoreObjective objects. */
     private final Map<IScoreCriteria, List<ScoreObjective>> scoreObjectiveCriterias = Maps.<IScoreCriteria, List<ScoreObjective>>newHashMap();
+    /** Map of entities name to ScoreObjective objects. */
     private final Map<String, Map<ScoreObjective, Score>> entitiesScoreObjectives = Maps.<String, Map<ScoreObjective, Score>>newHashMap();
     /** Index 0 is tab menu, 1 is sidebar, and 2 is below name */
     private final ScoreObjective[] objectiveDisplaySlots = new ScoreObjective[19];
+    /** Map of teamnames to ScorePlayerTeam instances */
     private final Map<String, ScorePlayerTeam> teams = Maps.<String, ScorePlayerTeam>newHashMap();
+    /** Map of usernames to ScorePlayerTeam objects. */
     private final Map<String, ScorePlayerTeam> teamMemberships = Maps.<String, ScorePlayerTeam>newHashMap();
     private static String[] displaySlots;
 
@@ -67,6 +72,9 @@ public class Scoreboard
         }
     }
 
+    /**
+     * Returns all the objectives for the given criteria
+     */
     public Collection<ScoreObjective> getObjectivesFromCriteria(IScoreCriteria criteria)
     {
         Collection<ScoreObjective> collection = (Collection)this.scoreObjectiveCriterias.get(criteria);
@@ -122,6 +130,9 @@ public class Scoreboard
         }
     }
 
+    /**
+     * Returns an array of Score objects, sorting by Score.getScorePoints()
+     */
     public Collection<Score> getSortedScores(ScoreObjective objective)
     {
         List<Score> list = Lists.<Score>newArrayList();
@@ -202,6 +213,9 @@ public class Scoreboard
         return list;
     }
 
+    /**
+     * Returns all the objectives for the given entity
+     */
     public Map<ScoreObjective, Score> getObjectivesForEntity(String name)
     {
         Map<ScoreObjective, Score> map = (Map)this.entitiesScoreObjectives.get(name);
@@ -365,11 +379,17 @@ public class Scoreboard
         }
     }
 
+    /**
+     * Retrieve all registered ScorePlayerTeam names
+     */
     public Collection<String> getTeamNames()
     {
         return this.teams.keySet();
     }
 
+    /**
+     * Retrieve all registered ScorePlayerTeam instances
+     */
     public Collection<ScorePlayerTeam> getTeams()
     {
         return this.teams.values();

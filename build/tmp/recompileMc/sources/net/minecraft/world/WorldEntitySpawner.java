@@ -25,6 +25,7 @@ import net.minecraft.world.chunk.Chunk;
 public final class WorldEntitySpawner
 {
     private static final int MOB_COUNT_DIV = (int)Math.pow(17.0D, 2.0D);
+    /** The 17x17 area around the player where mobs can spawn */
     private final Set<ChunkPos> eligibleChunksForSpawning = Sets.<ChunkPos>newHashSet();
 
     /**

@@ -364,11 +364,6 @@ public class MathHelper
      */
     public static int log2(int value)
     {
-        /**
-         * Uses a B(2, 5) De Bruijn sequence and a lookup table to efficiently calculate the log-base-two of the given
-         * value. Optimized for cases where the input value is a power-of-two. If the input value is not a power-of-two,
-         * then subtract 1 from the return value.
-         */
         return log2DeBruijn(value) - (isPowerOfTwo(value) ? 0 : 1);
     }
 
@@ -413,9 +408,6 @@ public class MathHelper
     @SideOnly(Side.CLIENT)
     public static int rgb(float rIn, float gIn, float bIn)
     {
-        /**
-         * Makes a single int color with the given red, green, and blue values.
-         */
         return rgb(floor(rIn * 255.0F), floor(gIn * 255.0F), floor(bIn * 255.0F));
     }
 

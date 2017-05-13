@@ -13,12 +13,15 @@ import org.apache.logging.log4j.Logger;
 public class Profiler
 {
     private static final Logger LOGGER = LogManager.getLogger();
+    /** List of parent sections */
     private final List<String> sectionList = Lists.<String>newArrayList();
+    /** List of timestamps (System.nanoTime) */
     private final List<Long> timestampList = Lists.<Long>newArrayList();
     /** Flag profiling enabled */
     public boolean profilingEnabled;
     /** Current profiling section */
     private String profilingSection = "";
+    /** Profiling map */
     private final Map<String, Long> profilingMap = Maps.<String, Long>newHashMap();
 
     /**
@@ -79,6 +82,9 @@ public class Profiler
         }
     }
 
+    /**
+     * Get profiling data
+     */
     public List<Profiler.Result> getProfilingData(String profilerName)
     {
         if (!this.profilingEnabled)

@@ -79,9 +79,6 @@ public enum EnumFacing implements IStringSerializable
      */
     public EnumFacing getOpposite()
     {
-        /**
-         * Get a Facing by it's index (0-5). The order is D-U-N-S-W-E. Named getFront for legacy reasons.
-         */
         return getFront(this.opposite);
     }
 
@@ -269,9 +266,6 @@ public enum EnumFacing implements IStringSerializable
      */
     public static EnumFacing fromAngle(double angle)
     {
-        /**
-         * Get a Facing by it's horizontal index (0-3). The order is S-W-N-E.
-         */
         return getHorizontal(MathHelper.floor(angle / 90.0D + 0.5D) & 3);
     }
 

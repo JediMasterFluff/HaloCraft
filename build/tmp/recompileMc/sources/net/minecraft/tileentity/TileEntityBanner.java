@@ -23,7 +23,9 @@ public class TileEntityBanner extends TileEntity implements IWorldNameable
     /** A list of all the banner patterns. */
     private NBTTagList patterns;
     private boolean patternDataSet;
+    /** A list of all patterns stored on this banner. */
     private List<BannerPattern> patternList;
+    /** A list of all the color values stored on this banner. */
     private List<EnumDyeColor> colorList;
     /** This is a String representation of this banners pattern and color lists, used for texture caching. */
     private String patternResourceLocation;
@@ -125,6 +127,10 @@ public class TileEntityBanner extends TileEntity implements IWorldNameable
         return nbttagcompound != null && nbttagcompound.hasKey("Patterns") ? nbttagcompound.getTagList("Patterns", 10).tagCount() : 0;
     }
 
+    /**
+     * Retrieves the list of patterns for this tile entity. The banner data will be initialized/refreshed before this
+     * happens.
+     */
     @SideOnly(Side.CLIENT)
     public List<BannerPattern> getPatternList()
     {
@@ -132,6 +138,10 @@ public class TileEntityBanner extends TileEntity implements IWorldNameable
         return this.patternList;
     }
 
+    /**
+     * Retrieves the list of colors for this tile entity. The banner data will be initialized/refreshed before this
+     * happens.
+     */
     @SideOnly(Side.CLIENT)
     public List<EnumDyeColor> getColorList()
     {

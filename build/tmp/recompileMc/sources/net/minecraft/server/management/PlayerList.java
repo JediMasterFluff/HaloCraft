@@ -75,7 +75,9 @@ public abstract class PlayerList
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd \'at\' HH:mm:ss z");
     /** Reference to the MinecraftServer object. */
     private final MinecraftServer mcServer;
+    /** A list of player entities that exist on this server. */
     private final List<EntityPlayerMP> playerEntityList = Lists.<EntityPlayerMP>newArrayList();
+    /** A map containing the key-value pairs for UUIDs and their EntityPlayerMP objects. */
     private final Map<UUID, EntityPlayerMP> uuidToPlayerMap = Maps.<UUID, EntityPlayerMP>newHashMap();
     private final UserListBans bannedPlayers;
     private final UserListIPBans bannedIPs;

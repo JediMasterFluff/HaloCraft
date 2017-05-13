@@ -37,10 +37,6 @@ public class ScreenShotHelper
      */
     public static ITextComponent saveScreenshot(File gameDirectory, int width, int height, Framebuffer buffer)
     {
-        /**
-         * Saves a screenshot in the game directory with the given file name (or null to generate a time-stamped name).
-         * Returns an ITextComponent indicating the success/failure of the saving.
-         */
         return saveScreenshot(gameDirectory, (String)null, width, height, buffer);
     }
 

@@ -19,8 +19,11 @@ import net.minecraft.world.WorldSavedData;
 public class MapStorage
 {
     private final ISaveHandler saveHandler;
+    /** Map of item data String id to loaded MapDataBases */
     protected Map<String, WorldSavedData> loadedDataMap = Maps.<String, WorldSavedData>newHashMap();
+    /** List of loaded MapDataBases. */
     private final List<WorldSavedData> loadedDataList = Lists.<WorldSavedData>newArrayList();
+    /** Map of MapDataBase id String prefixes ('map' etc) to max known unique Short id (the 0 part etc) for that prefix */
     private final Map<String, Short> idCounts = Maps.<String, Short>newHashMap();
 
     public MapStorage(ISaveHandler saveHandlerIn)

@@ -34,6 +34,7 @@ public enum TextFormatting
     ITALIC("ITALIC", 'o', true),
     RESET("RESET", 'r', -1);
 
+    /** Maps a name (e.g., 'underline') to its corresponding enum value (e.g., UNDERLINE). */
     private static final Map<String, TextFormatting> NAME_MAPPING = Maps.<String, TextFormatting>newHashMap();
     /**
      * Matches formatting codes that indicate that the client should treat the following text as bold, recolored,
@@ -156,6 +157,9 @@ public enum TextFormatting
         }
     }
 
+    /**
+     * Gets all the valid values.
+     */
     public static Collection<String> getValidValues(boolean p_96296_0_, boolean p_96296_1_)
     {
         List<String> list = Lists.<String>newArrayList();

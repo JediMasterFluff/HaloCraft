@@ -149,6 +149,9 @@ public class EmptyChunk extends Chunk
     {
     }
 
+    /**
+     * Gets all entities that can be assigned to the specified class.
+     */
     public <T extends Entity> void getEntitiesOfTypeWithinAAAB(Class <? extends T > entityClass, AxisAlignedBB aabb, List<T> listToFill, Predicate <? super T > filter)
     {
     }

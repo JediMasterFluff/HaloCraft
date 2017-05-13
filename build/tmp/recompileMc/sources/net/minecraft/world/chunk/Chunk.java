@@ -65,7 +65,9 @@ public class Chunk
     /** The z coordinate of the chunk. */
     public final int zPosition;
     private boolean isGapLightingUpdated;
+    /** A Map of ChunkPositions to TileEntities in this chunk */
     private final Map<BlockPos, TileEntity> chunkTileEntityMap;
+    /** Array of Lists containing the entities in this Chunk. Each List represents a 16 block subchunk. */
     private final ClassInheritanceMultiMap<Entity>[] entityLists;
     /** Boolean value indicating if the terrain is populated. */
     private boolean isTerrainPopulated;
@@ -83,6 +85,7 @@ public class Chunk
     private long inhabitedTime;
     /** Contains the current round-robin relight check index, and is implied as the relight check location as well. */
     private int queuedLightChecks;
+    /** "queue containing the BlockPos of tile entities queued for creation" */
     private final ConcurrentLinkedQueue<BlockPos> tileEntityPosQueue;
     public boolean unloaded;
 
@@ -972,6 +975,9 @@ public class Chunk
         }
     }
 
+    /**
+     * Gets all entities that can be assigned to the specified class.
+     */
     public <T extends Entity> void getEntitiesOfTypeWithinAAAB(Class <? extends T > entityClass, AxisAlignedBB aabb, List<T> listToFill, Predicate <? super T > filter)
     {
         int i = MathHelper.floor((aabb.minY - World.MAX_ENTITY_RADIUS) / 16.0D);

@@ -26,6 +26,7 @@ public class RConThreadMain extends RConThreadBase
     private ServerSocket serverSocket;
     /** The RCon password */
     private final String rconPassword;
+    /** A map of client addresses to their running Threads */
     private Map<SocketAddress, RConThreadClient> clientThreads;
 
     public RConThreadMain(IServer p_i1538_1_)

@@ -76,9 +76,6 @@ public class CryptManager
     {
         try
         {
-            /**
-             * Compute a message digest on arbitrary byte[] data
-             */
             return digestOperation("SHA-1", new byte[][] {serverId.getBytes("ISO_8859_1"), secretKey.getEncoded(), publicKey.getEncoded()});
         }
         catch (UnsupportedEncodingException unsupportedencodingexception)
@@ -149,9 +146,6 @@ public class CryptManager
     @SideOnly(Side.CLIENT)
     public static byte[] encryptData(Key key, byte[] data)
     {
-        /**
-         * Encrypt or decrypt byte[] data using the specified key
-         */
         return cipherOperation(1, key, data);
     }
 
@@ -160,9 +154,6 @@ public class CryptManager
      */
     public static byte[] decryptData(Key key, byte[] data)
     {
-        /**
-         * Encrypt or decrypt byte[] data using the specified key
-         */
         return cipherOperation(2, key, data);
     }
 
@@ -173,9 +164,6 @@ public class CryptManager
     {
         try
         {
-            /**
-             * Creates the Cipher Instance.
-             */
             return createTheCipherInstance(opMode, key.getAlgorithm(), key).doFinal(data);
         }
         catch (IllegalBlockSizeException illegalblocksizeexception)

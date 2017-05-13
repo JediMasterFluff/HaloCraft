@@ -92,6 +92,9 @@ public class ExtendedBlockState extends BlockStateContainer
             this.propertyValueTable = table;
         }
 
+        /**
+         * Get a version of this BlockState with the given Property now set to the given value
+         */
         @Override
         @Nonnull
         public <T extends Comparable<T>, V extends T> IBlockState withProperty(@Nonnull IProperty<T> property, @Nonnull V value)

@@ -545,9 +545,6 @@ public class TileEntityHopper extends TileEntityLockableLoot implements IHopper,
     private IInventory getInventoryForHopperTransfer()
     {
         EnumFacing enumfacing = BlockHopper.getFacing(this.getBlockMetadata());
-        /**
-         * Returns the IInventory (if applicable) of the TileEntity at the specified position
-         */
         return getInventoryAtPosition(this.getWorld(), this.getXPos() + (double)enumfacing.getFrontOffsetX(), this.getYPos() + (double)enumfacing.getFrontOffsetY(), this.getZPos() + (double)enumfacing.getFrontOffsetZ());
     }
 
@@ -556,9 +553,6 @@ public class TileEntityHopper extends TileEntityLockableLoot implements IHopper,
      */
     public static IInventory getHopperInventory(IHopper hopper)
     {
-        /**
-         * Returns the IInventory (if applicable) of the TileEntity at the specified position
-         */
         return getInventoryAtPosition(hopper.getWorld(), hopper.getXPos(), hopper.getYPos() + 1.0D, hopper.getZPos());
     }
 

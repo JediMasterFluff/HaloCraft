@@ -18,7 +18,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Snooper
 {
+    /** The snooper Map of stats */
     private final Map<String, Object> snooperStats = Maps.<String, Object>newHashMap();
+    /** The client Map of stats */
     private final Map<String, Object> clientStats = Maps.<String, Object>newHashMap();
     private final String uniqueID = UUID.randomUUID().toString();
     /** URL of the server to send the report to */

@@ -19,6 +19,10 @@ import net.minecraft.world.WorldSavedData;
 public class VillageCollection extends WorldSavedData
 {
     private World world;
+    /**
+     * This is a black hole. You can add data to this list through a public interface, but you can't query that
+     * information in any way and it's not used internally either.
+     */
     private final List<BlockPos> villagerPositionsList = Lists.<BlockPos>newArrayList();
     private final List<VillageDoorInfo> newDoors = Lists.<VillageDoorInfo>newArrayList();
     private final List<Village> villageList = Lists.<Village>newArrayList();
@@ -95,6 +99,9 @@ public class VillageCollection extends WorldSavedData
         }
     }
 
+    /**
+     * Get a list of villages.
+     */
     public List<Village> getVillageList()
     {
         return this.villageList;

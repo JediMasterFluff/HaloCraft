@@ -96,6 +96,7 @@ public abstract class MinecraftServer implements Runnable, ICommandSender, IThre
     /** The PlayerUsageSnooper instance. */
     private final Snooper usageSnooper = new Snooper("server", this, getCurrentTimeMillis());
     private final File anvilFile;
+    /** List of names of players who are online. */
     private final List<ITickable> tickables = Lists.<ITickable>newArrayList();
     public final ICommandManager commandManager;
     public final Profiler theProfiler = new Profiler();

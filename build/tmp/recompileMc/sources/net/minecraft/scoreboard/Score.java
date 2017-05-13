@@ -4,6 +4,7 @@ import java.util.Comparator;
 
 public class Score
 {
+    /** Used for sorting score by points */
     public static final Comparator<Score> SCORE_COMPARATOR = new Comparator<Score>()
     {
         public int compare(Score p_compare_1_, Score p_compare_2_)

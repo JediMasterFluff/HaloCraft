@@ -240,6 +240,9 @@ public class BlockPos extends Vec3i
         return new BlockPos(i, j, k);
     }
 
+    /**
+     * Create an Iterable that returns all positions in the box specified by the given corners
+     */
     public static Iterable<BlockPos> getAllInBox(BlockPos from, BlockPos to)
     {
         return func_191532_a(Math.min(from.getX(), to.getX()), Math.min(from.getY(), to.getY()), Math.min(from.getZ(), to.getZ()), Math.max(from.getX(), to.getX()), Math.max(from.getY(), to.getY()), Math.max(from.getZ(), to.getZ()));
@@ -308,6 +311,10 @@ public class BlockPos extends Vec3i
         return this;
     }
 
+    /**
+     * Like getAllInBox but reuses a single MutableBlockPos instead. If this method is used, the resulting BlockPos
+     * instances can only be used inside the iteration loop.
+     */
     public static Iterable<BlockPos.MutableBlockPos> getAllInBoxMutable(BlockPos from, BlockPos to)
     {
         return func_191531_b(Math.min(from.getX(), to.getX()), Math.min(from.getY(), to.getY()), Math.min(from.getZ(), to.getZ()), Math.max(from.getX(), to.getX()), Math.max(from.getY(), to.getY()), Math.max(from.getZ(), to.getZ()));

@@ -39,6 +39,7 @@ public class TileEntityBeacon extends TileEntityLockable implements ITickable, I
     /** List of effects that Beacon can apply */
     public static final Potion[][] EFFECTS_LIST = new Potion[][] {{MobEffects.SPEED, MobEffects.HASTE}, {MobEffects.RESISTANCE, MobEffects.JUMP_BOOST}, {MobEffects.STRENGTH}, {MobEffects.REGENERATION}};
     private static final Set<Potion> VALID_EFFECTS = Sets.<Potion>newHashSet();
+    /** A list of beam segments for this beacon */
     private final List<TileEntityBeacon.BeamSegment> beamSegments = Lists.<TileEntityBeacon.BeamSegment>newArrayList();
     @SideOnly(Side.CLIENT)
     private long beamRenderCounter;

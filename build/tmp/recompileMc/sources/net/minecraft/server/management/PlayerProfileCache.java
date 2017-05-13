@@ -44,8 +44,11 @@ public class PlayerProfileCache
 {
     public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
     private static boolean onlineMode;
+    /** A map between player usernames and {@link ProfileEntry profile entries} */
     private final Map<String, PlayerProfileCache.ProfileEntry> usernameToProfileEntryMap = Maps.<String, PlayerProfileCache.ProfileEntry>newHashMap();
+    /** A map between {@link UUID UUID's} and {@link ProfileEntry ProfileEntries} */
     private final Map<UUID, PlayerProfileCache.ProfileEntry> uuidToProfileEntryMap = Maps.<UUID, PlayerProfileCache.ProfileEntry>newHashMap();
+    /** A list of all the cached {@link GameProfile GameProfiles} */
     private final Deque<GameProfile> gameProfiles = Lists.<GameProfile>newLinkedList();
     private final GameProfileRepository profileRepo;
     protected final Gson gson;
@@ -294,6 +297,9 @@ public class PlayerProfileCache
         }
     }
 
+    /**
+     * Get the {@link PlayerProfileCache.ProfileEntry entries} of this cache with a given limit
+     */
     private List<PlayerProfileCache.ProfileEntry> getEntriesWithLimit(int limitSize)
     {
         List<PlayerProfileCache.ProfileEntry> list = Lists.<PlayerProfileCache.ProfileEntry>newArrayList();

@@ -150,6 +150,9 @@ public class UniversalBucket extends Item
         return I18n.translateToLocalFormatted(unloc + ".name", fluidStack.getLocalizedName());
     }
 
+    /**
+     * Called when the equipped item is right clicked.
+     */
     @Override
     @Nonnull
     public ActionResult<ItemStack> onItemRightClick(@Nonnull World world, @Nonnull EntityPlayer player, @Nonnull EnumHand hand)

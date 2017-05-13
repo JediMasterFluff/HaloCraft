@@ -21,6 +21,7 @@ public final class EntitySelectors
             return p_apply_1_.isEntityAlive();
         }
     };
+    /** Selects only entities which are neither ridden by anything nor ride on anything */
     public static final Predicate<Entity> IS_STANDALONE = new Predicate<Entity>()
     {
         public boolean apply(@Nullable Entity p_apply_1_)
@@ -42,6 +43,7 @@ public final class EntitySelectors
             return !(p_apply_1_ instanceof EntityPlayer) || !((EntityPlayer)p_apply_1_).isSpectator() && !((EntityPlayer)p_apply_1_).isCreative();
         }
     };
+    /** Selects entities which are either not players or players that are not spectating */
     public static final Predicate<Entity> NOT_SPECTATING = new Predicate<Entity>()
     {
         public boolean apply(@Nullable Entity p_apply_1_)

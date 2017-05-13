@@ -264,9 +264,6 @@ public class Vec3d
      */
     public static Vec3d fromPitchYawVector(Vec2f p_189984_0_)
     {
-        /**
-         * returns a Vec3d from given pitch and yaw degrees
-         */
         return fromPitchYaw(p_189984_0_.x, p_189984_0_.y);
     }
 

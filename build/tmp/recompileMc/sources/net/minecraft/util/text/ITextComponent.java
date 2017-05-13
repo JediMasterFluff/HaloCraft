@@ -71,6 +71,9 @@ public interface ITextComponent extends Iterable<ITextComponent>
      */
     String getFormattedText();
 
+    /**
+     * Gets the sibling components of this one.
+     */
     List<ITextComponent> getSiblings();
 
     /**

@@ -95,10 +95,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the string value of the given JsonElement.  Expects the second parameter to be the name of the
-             * element's field if an error message needs to be thrown.
-             */
             return getString(json.get(memberName), memberName);
         }
         else
@@ -175,10 +171,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the boolean value of the given JsonElement.  Expects the second parameter to be the name of the
-             * element's field if an error message needs to be thrown.
-             */
             return getBoolean(json.get(memberName), memberName);
         }
         else
@@ -219,10 +211,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the float value of the given JsonElement.  Expects the second parameter to be the name of the
-             * element's field if an error message needs to be thrown.
-             */
             return getFloat(json.get(memberName), memberName);
         }
         else
@@ -263,10 +251,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the integer value of the given JsonElement.  Expects the second parameter to be the name of the
-             * element's field if an error message needs to be thrown.
-             */
             return getInt(json.get(memberName), memberName);
         }
         else
@@ -304,10 +288,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the given JsonElement as a JsonObject.  Expects the second parameter to be the name of the element's
-             * field if an error message needs to be thrown.
-             */
             return getJsonObject(json.get(memberName), memberName);
         }
         else
@@ -349,10 +329,6 @@ public class JsonUtils
     {
         if (json.has(memberName))
         {
-            /**
-             * Gets the given JsonElement as a JsonArray.  Expects the second parameter to be the name of the element's
-             * field if an error message needs to be thrown.
-             */
             return getJsonArray(json.get(memberName), memberName);
         }
         else

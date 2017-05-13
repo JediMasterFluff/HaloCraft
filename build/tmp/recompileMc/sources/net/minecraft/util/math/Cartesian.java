@@ -14,24 +14,33 @@ import javax.annotation.Nullable;
 
 public class Cartesian
 {
+    /**
+     * Create the cartesian product. This method returns an Iterable of arrays of type clazz.
+     */
     public static <T> Iterable<T[]> cartesianProduct(Class<T> clazz, Iterable <? extends Iterable <? extends T >> sets)
     {
         return new Cartesian.Product(clazz, (Iterable[])toArray(Iterable.class, sets));
     }
 
+    /**
+     * Like cartesianProduct(Class, Iterable) but returns an Iterable of Lists instead.
+     */
     public static <T> Iterable<List<T>> cartesianProduct(Iterable <? extends Iterable <? extends T >> sets)
     {
-        /**
-         * Convert an Iterable of Arrays (Object[]) to an Iterable of Lists
-         */
         return arraysAsLists(cartesianProduct(Object.class, sets));
     }
 
+    /**
+     * Convert an Iterable of Arrays (Object[]) to an Iterable of Lists
+     */
     private static <T> Iterable<List<T>> arraysAsLists(Iterable<Object[]> arrays)
     {
         return Iterables.transform(arrays, new Cartesian.GetList());
     }
 
+    /**
+     * Create a new Array of type clazz with the contents of the given Iterable
+     */
     private static <T> T[] toArray(Class <? super T > clazz, Iterable <? extends T > it)
     {
         List<T> list = Lists.<T>newArrayList();

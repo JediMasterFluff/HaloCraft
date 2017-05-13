@@ -12,9 +12,7 @@ import net.minecraftforge.common.util.EnumHelper;
 public class BlockBase extends Block implements ItemModelProvider {
 
 	protected String name;
-	
-	public static ToolMaterial haloToolMaterial = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damage, enchantability);
-
+		
 	public BlockBase(Material mat, String name) {
 		super(mat);
 		this.name = name;

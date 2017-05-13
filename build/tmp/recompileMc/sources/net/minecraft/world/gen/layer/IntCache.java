@@ -6,9 +6,19 @@ import java.util.List;
 public class IntCache
 {
     private static int intCacheSize = 256;
+    /** A list of pre-allocated int[256] arrays that are currently unused and can be returned by getIntCache() */
     private static final List<int[]> freeSmallArrays = Lists.<int[]>newArrayList();
+    /**
+     * A list of pre-allocated int[256] arrays that were previously returned by getIntCache() and which will not be re-
+     * used again until resetIntCache() is called.
+     */
     private static final List<int[]> inUseSmallArrays = Lists.<int[]>newArrayList();
+    /** A list of pre-allocated int[cacheSize] arrays that are currently unused and can be returned by getIntCache() */
     private static final List<int[]> freeLargeArrays = Lists.<int[]>newArrayList();
+    /**
+     * A list of pre-allocated int[cacheSize] arrays that were previously returned by getIntCache() and which will not
+     * be re-used again until resetIntCache() is called.
+     */
     private static final List<int[]> inUseLargeArrays = Lists.<int[]>newArrayList();
 
     public static synchronized int[] getIntCache(int p_76445_0_)

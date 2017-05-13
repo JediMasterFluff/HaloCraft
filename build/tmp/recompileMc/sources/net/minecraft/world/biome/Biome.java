@@ -100,8 +100,11 @@ public abstract class Biome extends net.minecraftforge.fml.common.registry.IForg
     public IBlockState fillerBlock = Blocks.DIRT.getDefaultState();
     /** The biome decorator. */
     public BiomeDecorator theBiomeDecorator;
+    /** Holds the classes of IMobs (hostile mobs) that can be spawned in the biome. */
     protected List<Biome.SpawnListEntry> spawnableMonsterList = Lists.<Biome.SpawnListEntry>newArrayList();
+    /** Holds the classes of any creature that can be spawned in the biome as friendly creature. */
     protected List<Biome.SpawnListEntry> spawnableCreatureList = Lists.<Biome.SpawnListEntry>newArrayList();
+    /** Holds the classes of any aquatic creature that can be spawned in the water of the biome. */
     protected List<Biome.SpawnListEntry> spawnableWaterCreatureList = Lists.<Biome.SpawnListEntry>newArrayList();
     protected List<Biome.SpawnListEntry> spawnableCaveCreatureList = Lists.<Biome.SpawnListEntry>newArrayList();
     // Forge: Stores the spawnable lists for non-vanilla EnumCreatureTypes. Can't be an EnumMap as that doesn't handle new enum values being added after it's created.
@@ -195,6 +198,9 @@ public abstract class Biome extends net.minecraftforge.fml.common.registry.IForg
         return MathHelper.hsvToRGB(0.62222224F - currentTemperature * 0.05F, 0.5F + currentTemperature * 0.1F, 1.0F);
     }
 
+    /**
+     * Returns the correspondent list of the EnumCreatureType informed.
+     */
     public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType)
     {
         switch (creatureType)

@@ -12,6 +12,7 @@ public class ScorePlayerTeam extends Team
 {
     private final Scoreboard theScoreboard;
     private final String registeredName;
+    /** A set of all team member usernames. */
     private final Set<String> membershipSet = Sets.<String>newHashSet();
     private String teamNameSPT;
     private String namePrefixSPT = "";

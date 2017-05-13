@@ -41,7 +41,9 @@ public class Explosion
     private final double explosionZ;
     private final Entity exploder;
     private final float explosionSize;
+    /** A list of ChunkPositions of blocks affected by this explosion */
     private final List<BlockPos> affectedBlockPositions;
+    /** Maps players to the knockback vector applied by the explosion, to send to the client */
     private final Map<EntityPlayer, Vec3d> playerKnockbackMap;
     private final Vec3d position;
 
